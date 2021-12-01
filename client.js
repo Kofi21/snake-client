@@ -17,9 +17,12 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("successfully connected to the game server");
     conn.write("Name: KOF");
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 50);
   });
 
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect };
